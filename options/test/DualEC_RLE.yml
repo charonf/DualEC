@@ -1,0 +1,43 @@
+# general settings
+name: DualEC_RLE
+model_type: MambaLLIE
+scale: 1
+num_gpu: 1
+manual_seed: 10
+
+# dataset and data loader settings
+datasets:
+  val:
+    name: RLE
+    type: PairedImageDataset
+    dataroot_gt: data/RLE/evaluation/high
+    dataroot_lq: data/RLE/evaluation/low
+    io_backend:
+      type: disk
+
+# network structures
+network_g:
+  type: DualEC
+
+# path
+path:
+  pretrain_network_g: models/RLE.pth
+  resume_state: ~
+
+# validation settings
+val:
+  save_img: True
+
+  suffix: ~  # add suffix to saved images, if None, use exp name
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: false
+    ssim:
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: false
+
+
