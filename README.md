@@ -24,5 +24,5 @@ PYTHONPATH="./:${PYTHONPATH}" python3 basicsr/test.py -opt options/test/DualEC_C
 PYTHONPATH="./:${PYTHONPATH}" python3 basicsr/test.py -opt options/test/DualEC_KC.yml
 PYTHONPATH="./:${PYTHONPATH}" python3 basicsr/test.py -opt options/test/DualEC_Endo4IE_UN.yml
 PYTHONPATH="./:${PYTHONPATH}" python3 basicsr/test.py -opt options/test/DualEC_Endo4IE_Over.yml
-PYTHONPATH="./:${PYTHONPATH}" python3 basicsr/test.py -opt options/test/DualEC_REL.yml
+PYTHONPATH="./:${PYTHONPATH}" python3 basicsr/test.py -opt options/test/DualEC_RLE.yml
 ```
